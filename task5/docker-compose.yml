@@ -11,5 +11,10 @@ services:
       context: ./back-end
       dockerfile: Dockerfile
     image: my-backend-app:latest
+  proxy:
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    image: finalimage:latest
     ports:
-      - "9000:5252"
+      - "80:80"
